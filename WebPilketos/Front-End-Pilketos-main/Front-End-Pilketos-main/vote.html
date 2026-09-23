@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/vote/styles.css">
+</head>
+<body>
+    <div class="voting-wrapper">
+        <img src="./styles/vote/photos/background.svg" class="background" alt="">
+        <div class="container">
+            <div class="caketos-wrapper">
+                <h3>VOTE SEKARANG!</h3>
+                <div class="profil-caketos-wrapper">
+                    <div class="profil-caketos-wrapper-2">
+                        <div class="profil-caketos">                       
+                            <h5 class="nomor-urut">1</h5>
+                            <h5>Pil-1</h5>
+                            <img src="./styles/index/photos/Pil-1.jpe" alt="">
+                            <h6 onclick="profilCaketos(1)">LIHAT PROFIL</h6>
+                        </div>
+                        <button id="caketos-1" onclick='tombolClick(this.id)'>VOTE</button>
+                    </div>
+                    <div class="profil-caketos-wrapper-2">
+                        <div class="profil-caketos">
+                            <h5 class="nomor-urut">2</h5>
+                            <h5>Pil-2</h5>
+                            <img src="./styles/index/photos/Pil-2.jpe" alt="">
+                            <h6 onclick="profilCaketos(2)">LIHAT PROFIL</h6>
+                        </div>
+                        <button id="caketos-2" onclick='tombolClick(this.id)'>VOTE</button>
+                    </div>
+                    
+                    <div class="profil-caketos-wrapper-2">
+                        <div class="profil-caketos">
+                            <h5 class="nomor-urut">3</h5>
+                            <h5>Pil-3</h5>
+                            <img src="./styles/index/photos/Pil-3.png" alt="">
+                            <h6 onclick="profilCaketos(3)">LIHAT PROFIL</h6>
+                        </div>
+                        <button id="caketos-3" onclick='tombolClick(this.id)'>VOTE</button>
+                    </div>
+                </div>
+                <button class='tombol-submit' type="submit">SUBMIT VOTE</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="background-visi-misi display-none" id="background-visi-misi">
+        <div class="visi-misi-wrapper">
+            <div class="visi-misi-item">
+                <div class="visi-misi-content display-none" id="caketos-aulia">
+                    <h3 class="nama">Pil-1</h3>
+                    <img src="./styles/index/photos/Pil-1.jpe" alt="">
+                    <h3 class="visi-misi">Visi</h3>
+                    <div class="visi">
+                        <p>
+                            Lorem ipsum dolor sit amet
+                        </p>
+                    </div>
+                    <h3 class="visi-misi">Misi</h3>
+                    <div class="misi">
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="visi-misi-content display-none" id="caketos-nabiel">
+                    <h3 class="nama">Pil-2</h3>
+                    <img src="./styles/index/photos/Pil-2.jpe" alt="">
+                    <h3 class="visi-misi">Visi</h3>
+                    <div class="visi">
+                        <p>
+                            Lorem ipsum dolor sit amet
+                        </p>
+                    </div>
+                    <h3 class="visi-misi">Misi</h3>
+                    <div class="misi">
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="visi-misi-content display-none" id="caketos-wildan">
+                    <h3 class="nama">Pil-3</h3>
+                    <img src="./styles/index/photos/Pil-3.png" alt="">
+                    <h3 class="visi-misi">Visi</h3>
+                    <div class="visi">
+                        <p>
+                            Lorem ipsum dolor sit amet
+                        </p>
+                    </div>
+                    <h3 class="visi-misi">Misi</h3>
+                    <div class="misi">
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="tombol-keluar">
+                <img onclick="keluar()" src="./styles/index/photos/vector/cross.svg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="display-none">
+        <input class="input" type="radio" name="Pilihan" value="calon1" id="calon1">
+        <input class="input" type="radio" name="Pilihan" value="calon2" id="calon2">
+        <input class="input" type="radio" name="Pilihan" value="calon3" id="calon3">
+    </div>
+
+    <script src="./styles/index/scripts/scripts.js"></script>
+    <script>
+        function tombolClick(caketos) {
+            document.getElementById(caketos).focus();
+            if (caketos == "caketos-1") {
+                document.getElementById("calon1").click();
+            } else {
+                if (caketos == "caketos-2") {
+                    document.getElementById("calon2").click();
+                } else {
+                    if (caketos == "caketos-3") {
+                        document.getElementById("calon3").click();
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>
